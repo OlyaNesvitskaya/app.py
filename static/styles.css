@@ -1,0 +1,36 @@
+body {
+    font-size: 18px;
+    margin: 5;
+    color: #292b2c;
+    background-image: url(images/image.jpeg);
+}
+.containerSayHello{
+    padding: 5px; /* Поля вокруг текста */
+    width: 300px; /* Ширина слоя */
+}
+.containerHasAlreadySaidHello{
+    padding: 5px; /* Поля вокруг текста */
+    float: left; /* Обтекание по правому краю */
+    width: auto; /* Ширина слоя */
+}
+.greetedHim{
+    background-color: #c0c0c0;
+    margin: 2px;
+    border: 2px solid black;
+    padding: 2px; /* Поля вокруг текста */
+    border-radius: 10px; /* Уголки */
+    border-color: #c0c0c0;
+    color: #000000;
+    float: left;
+    width: auto; /* Ширина слоя */
+}
+.submit{
+    padding: 5px; /* Поля вокруг текста */
+    width: auto; /* Ширина слоя */
+}
+.flash{
+    color: #008000;
+}
+.flash_error{
+    color: #FF0000;
+}

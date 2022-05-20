@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Головна сторінка</title>
+    <link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+    <div class="containerBoby">
+        <div class="containerSayHello">
+            <form action="/" method="post" class="form-contact">
+                <p><label>Email: </label><input type="text" name="email" value="" required/></p>
+                <p><input class="submit" type="submit" value="Привітатись"/></p>
+                {% with messages = get_flashed_messages(with_categories=true) %}
+                  {% if messages %}
+                    {% for category, message in messages %}
+                        {% if category=='error' %}
+                        <div class="flash_error">{{message}}</div>
+                        {% else %}
+                        <div class="flash">{{message}}</div>
+                        {% endif %}
+                    {% endfor %}
+                  {% endif %}
+                {% endwith %}
+                <p><a href="?list_of_users=1">Список, з ким уже привіталися</a></p>
+            </form>
+        </div>
+        <div class="containerHasAlreadySaidHello">
+            {% for item in items %}
+                <div class="greetedHim">{{ item.email }}</div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
