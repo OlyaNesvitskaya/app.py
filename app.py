@@ -7,7 +7,7 @@ from pymongo import MongoClient
 load_dotenv()
 
 
-client = MongoClient(host=os.environ.get('host'),
+client = MongoClient(host='test',
                      port=int(os.environ.get('port')))
 
 
@@ -44,5 +44,5 @@ def post_email():
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5005, debug=True)
+    app.run(host='0.0.0.0', port=5000, debug=True)
 #

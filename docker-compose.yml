@@ -6,11 +6,12 @@ services:
       - "5000:5000"
     volumes:
       - .:/app
-    links:
-      - mongo
+    depends_on:
+      - db
 
-  mongo:
+  db:
     image: mongo:4.4
+    hostname: test
     environment:
       -MONGO_INITDB_ROOT_USERNAME: root
       -MONGO_INITDB_ROOT_PASSWORD: pass
